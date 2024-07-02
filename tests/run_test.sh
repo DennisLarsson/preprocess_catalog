@@ -11,7 +11,7 @@ cat test_populations.sumstats.tsv | \
 
 gunzip test_catalog.fa.gz
 
-../filter_catalog.py \
+./filter_catalog.py \
     -i test_catalog.fa \
     -w whitelist_R04_max10snp \
     -o catalog_R04_max10snp.fa
