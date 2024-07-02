@@ -12,16 +12,16 @@ cat test_populations.sumstats.tsv | \
 gunzip test_catalog.fa.gz
 
 ./filter_catalog.py \
-    -i test_catalog.fa \
-    -w whitelist_R04_max10snp \
-    -o catalog_R04_max10snp.fa
+    --catalog test_catalog.fa \
+    --whitelist whitelist_R04_max10snp \
+    > catalog_R04_max10snp.fa
 
 blastn -db nt_euk \
     -query catalog_R04_max10snp.fa \
     -task megablast \
     -max_target_seqs 1 \
     -evalue 5 \
-    -outfmt "10 delim=@ qseqid qlen sscinames sblastnames sskingdoms stitle evalue bitscore score length nident qcovs" \ 
+    -outfmt "10 delim=@ qseqid qlen sscinames sblastnames sskingdoms stitle evalue bitscore score length nident qcovs" \
     -out results.out -remote
 
 diff whitelist_R04_max10snp expected_whitelist_R04_max10snp
