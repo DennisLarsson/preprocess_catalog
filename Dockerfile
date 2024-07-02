@@ -1,4 +1,4 @@
-FROM ubuntu:22.04 as preprocess_catalog
+FROM ubuntu:22.04 AS preprocess_catalog
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
