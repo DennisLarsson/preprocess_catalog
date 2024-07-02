@@ -17,3 +17,5 @@ RUN tar -xvf ncbi-blast-2.15.0+-x64-linux.tar.gz && \
 RUN update_blastdb.pl --decompress taxdb
 
 COPY filter_catalog.py /
+
+RUN chmod +x filter_catalog.py
