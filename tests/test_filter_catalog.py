@@ -1,5 +1,4 @@
 import unittest
-import argparse
 
 from filter_catalog import filter_whitelisted_loci
 
