@@ -1,8 +1,8 @@
 FROM preprocess_catalog AS test
-COPY test/expected_catalog.fa.gz /
-COPY test/expected_results.out /
-COPY test/expected_whitelist_R04_max10snp /
-COPY test/test_populations.sumstats.tsv /
-COPY test/run_test.sh /
+COPY tests/expected_catalog.fa.gz /
+COPY tests/expected_results.out /
+COPY tests/expected_whitelist_R04_max10snp /
+COPY tests/test_populations.sumstats.tsv /
+COPY tests/run_test.sh /
 
 RUN ./run_test.sh
