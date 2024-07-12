@@ -18,7 +18,7 @@ gunzip test_catalog.fa.gz
 
 blastn -db nt_euk \
     -query catalog_R04_max10snp.fa \
-    -task megablast \
+    -task blastn \
     -max_target_seqs 1 \
     -evalue 5 \
     -outfmt "10 delim=@ qseqid qlen sscinames sblastnames sskingdoms stitle evalue bitscore score length nident qcovs" \
