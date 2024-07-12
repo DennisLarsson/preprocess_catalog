@@ -25,6 +25,7 @@ if __name__ == "__main__":
 	args = argparser.parse_args()
 	whitelist_file_path = args.whitelist
 	catalog_path = args.catalog
+	print(whitelist_file_path, catalog_path)
 			
 	with open (whitelist_file_path) as whitelist_file:
 		whitelist = whitelist_file.readlines()
