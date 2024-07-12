@@ -1,7 +1,6 @@
 #!/bin/python3
 
 import argparse
-import sys
 
 def filter_whitelisted_loci(whitelist, catalog):
 	index_whitelist=0
@@ -26,8 +25,6 @@ if __name__ == "__main__":
 	args = argparser.parse_args()
 	whitelist_file_path = args.whitelist
 	catalog_path = args.catalog
-	sys.stderr.write(f"{whitelist_file_path} {catalog_path}\n")
-	sys.stderr.flush()
 			
 	with open (whitelist_file_path) as whitelist_file:
 		whitelist = whitelist_file.readlines()
