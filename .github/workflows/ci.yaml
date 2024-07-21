@@ -29,8 +29,11 @@ jobs:
       with:
         python-version: 3.9
 
-    - name: Run unittest
+    - name: Run filter_catalog unittest
       run: python -m unittest tests.test_filter_catalog
+    
+    - name: Run filter_nonplant_loci unittest
+      run: python -m unittest tests.test_filter_nonplant_loci
 
     - name: create test Dockerfile
       run: cat Dockerfile tests/Dockerfile.extended > Dockerfile.test
