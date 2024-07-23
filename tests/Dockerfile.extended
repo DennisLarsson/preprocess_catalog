@@ -1,0 +1,12 @@
+FROM preprocess_catalog AS test
+COPY tests/test_populations.sumstats.tsv /
+COPY tests/expected_whitelist_R04_max10snp /
+COPY tests/test_catalog.fa.gz /
+COPY tests/expected_catalog_R04_max10snp.fa /
+COPY tests/expected_catalog_R04_max10snp_blasted.fa /
+
+COPY tests/run_test.sh /
+
+RUN chmod +x run_test.sh
+
+CMD ["./run_test.sh"]
