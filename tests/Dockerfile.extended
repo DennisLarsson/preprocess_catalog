@@ -3,7 +3,6 @@ COPY tests/test_populations.sumstats.tsv /
 COPY tests/expected_whitelist_R04_max10snp /
 COPY tests/test_catalog.fa.gz /
 COPY tests/expected_catalog_R04_max10snp.fa /
-COPY tests/expected_results.out /
 COPY tests/expected_catalog_R04_max10snp_blasted.fa /
 
 COPY tests/run_test.sh /
