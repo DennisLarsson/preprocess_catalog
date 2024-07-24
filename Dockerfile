@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     wget \
     curl \
+    tabix \
     && rm -rf /var/lib/apt/lists/*
 
 RUN wget https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.15.0/ncbi-blast-2.15.0+-x64-linux.tar.gz
