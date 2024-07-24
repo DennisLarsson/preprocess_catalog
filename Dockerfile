@@ -15,7 +15,9 @@ RUN tar -xvf ncbi-blast-2.15.0+-x64-linux.tar.gz && \
     cd / && \
     rm -rf ncbi-blast-2.15.0+-x64-linux.tar.gz ncbi-blast-2.15.0+
 
-RUN update_blastdb.pl --decompress taxdb
+RUN mkdir -p /blastdb && \
+    cd /blastdb && \
+    update_blastdb.pl --decompress taxdb
 
 COPY filter_catalog.py /
 COPY filter_nonplant_loci.py /
