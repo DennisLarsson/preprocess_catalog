@@ -19,6 +19,8 @@ RUN mkdir -p /blastdb && \
     cd /blastdb && \
     update_blastdb.pl --decompress taxdb
 
+ENV BLASTDB=/blastdb
+
 COPY filter_catalog.py /
 COPY filter_nonplant_loci.py /
 
